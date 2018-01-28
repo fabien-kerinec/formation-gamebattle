@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>BoardGame</title>
+	<link rel="icon" href="./assets/favicon.png" />
+	<link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+	<div class="aide">
+		<img src="./assets/logo.svg" alt="logo board battle" class="logo">		
+		<button id="play">let's play ?</button>
+	</div>
+	<div class="gameBoard">
+		<div id="player1-controls" class="player-controls">			
+	        <div class="player-name">
+				<img src="./assets/img/players/user1.png" alt="avatar joueur 1">
+	        	<h1>Player 1</h1>
+	        </div>
+	        <div class="player-status">
+	            <div class="player-weapon-icon"></div>
+	            <div class="player-text-info">
+	                <div class="player-hp"></div>
+	                <div class="player-weapon-specs"></div>
+	            </div>
+	        </div>
+	    </div>
+		<img src="./assets/logo.svg" alt="logo board battle" class="logo-ingame">		
+		<div id="board">
+		</div>
+		<div id="player2-controls" class="player-controls">
+			
+			<div class="player-name">
+				<img src="./assets/img/players/user2.png" alt="avatar joueur 2">
+				<h1>Player 2</h1>
+			</div>
+		    <div class="player-status">
+		    	<div class="player-weapon-icon"></div>
+		        <div class="player-text-info">
+	                <div class="player-hp"></div>
+	                <div class="player-weapon-specs"></div>
+		        </div>
+		    </div>
+		</div>
+		<div id="combat-buttons">
+		    <button type="button" name="atk" class="btn-combat">Attaquer</button>
+		    <div id="currentPlayer"></div>
+		    <button type="button" name="def" class="btn-combat">Défendre</button>
+		</div>
+	</div>
+
+	<!--Librairie jQuery & Polyfills-->
+    <script type="text/javascript" src="./scripts/librairies/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="./scripts/librairies/polyfill.js"></script>
+    <!--Import des Classes JS-->
+	<script src="./scripts/components/board.js"></script>
+	<script src="./scripts/components/cell.js"></script>
+	<script src="./scripts/components/player.js"></script>
+	<script src="./scripts/components/weapon.js"></script>
+	<script src="./scripts/components/game.js"></script>
+	<!--Scripts de Contrôle et d'Affichage du Jeu-->
+	<script src="./scripts/controllers/displayController.js"></script>
+	<script src="./scripts/controllers/gameController.js"></script>
+	<!-- <script src="_build/bundle.js"></script> -->
+</body>
+</html>

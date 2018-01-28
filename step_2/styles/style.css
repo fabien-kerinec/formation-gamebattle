@@ -1,0 +1,261 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	background-color: #e3f2fd;
+}
+#board{
+	position: absolute;
+	
+	width: 700px;
+	height: 700px;
+
+	left: 50%;
+	top:45%;
+	transform:translate(-50%, -50%); 
+
+
+	background-color: #e3f2fd;
+}
+.gameBoard{
+	display: none;
+	position: relative;
+	
+	width: 100%;
+	height: 100%;
+}
+.aide{
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+
+	background-color: #e3f2fd;
+}
+
+.aide button{
+	position: relative;
+	
+	display: block;
+	
+	margin: 30px auto;
+	padding: 12px 24px;
+
+	border-width: 0;
+	outline: none;
+	border-right: 2px;
+	box-shadow: 0 1px 4px rgba(0,0,0, .6);
+
+	background-color: #1565c0;
+	color: #e3f2fd;
+
+	transition: background-color .3s, box-shadow .3s;
+
+	cursor:pointer;
+}
+
+button:hover, button:focus {
+  background-color: #0d47a1;
+  box-shadow: 0 4px 15px rgba(0,0,0, .6);
+}
+
+
+
+#player2-controls{
+	position: absolute;
+	right: 20px;
+	top: 0;
+}
+
+#player1-controls{
+	position: absolute;
+	left: 20px;
+	top: 0;
+	
+}
+
+#combat-buttons{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+
+	justify-content: space-around;
+
+	position: absolute;
+	
+	width: 700px;
+	height: 100px;
+	left: 50%;
+	bottom: 0;
+	transform:translate(-50%);
+}
+#combat-buttons button{
+	width: 70px;
+	height: 70px;
+	border : 1px solid #1565c0;
+	
+	outline: none;
+	
+	box-shadow: 0 1px 4px rgba(0,0,0, .6);
+
+	background-color: transparent;
+	color: #1565c0;
+
+	transition: background-color .3s, box-shadow .3s, color .3s;
+
+	cursor:pointer;
+}
+#combat-buttons button:hover{
+  background-color: #0d47a1;
+  box-shadow: 0 4px 15px rgba(0,0,0, .6);
+  color : #e3f2fd;
+}
+
+
+.row{
+	width: 700px;
+	height: 70px;
+	margin: 0;
+}
+
+.cell{
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid black;
+
+	width: 70px;
+	height: 70px;
+
+	margin: 0;
+}
+
+.cell-not-accessible{
+	background-image: url("../assets/img/wall.png");
+	background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.cell-weapon-1, .cell-weapon-2{
+	background-image: url("../assets/img/weapon/hand.png");
+	background-repeat: no-repeat;
+    background-position: right top;
+}
+.cell-weapon-3{
+	background-image: url("../assets/img/weapon/epee.png");
+	background-repeat: no-repeat;
+    background-position: right top;
+}
+.cell-weapon-4{
+	background-image: url("../assets/img/weapon/daggers.png");
+	background-repeat: no-repeat;
+    background-position: right top;
+}
+.cell-weapon-5{
+	background-image: url("../assets/img/weapon/crowbar.png");
+	background-repeat: no-repeat;
+    background-position: right top;
+}
+.cell-weapon-6{
+	background-image: url("../assets/img/weapon/baseballbat.png");
+	background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.cell-player-1{
+	background-color: #bbdefb;
+	background-image: url("../assets/img/players/user1.png");
+	background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.cell-player-2{
+	background-color: #bbdefb;
+	background-image: url("../assets/img/players/user2.png");
+	background-repeat: no-repeat;
+    background-position: right top;
+}
+
+
+.cell-movement{
+	background-color: #f8bbd0;
+}
+
+#currentPlayer{
+    font-family: sans-serif;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.winner{
+    position: absolute;
+    top: 150px;
+    font-weight: normal;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+.winner p span{
+	font-weight: bold;
+	
+}
+
+.player-weapon-icon{
+	width: 70px;
+	height: 70px;
+
+	margin-right: 25px;
+}
+
+.player-controls{
+	margin-top: 150px;
+}
+
+.player-name{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	align-items: flex-end;
+
+	margin-bottom: 50px;
+}
+.player-name img{
+	margin-right: 25px;
+}
+
+.player-name h1{
+	margin: 0;
+}
+
+.player-status{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+
+}

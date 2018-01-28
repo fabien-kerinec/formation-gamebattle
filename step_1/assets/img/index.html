@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+	<div class="aide">		
+		<button id="play">let's play</button>
+		<ul>
+			<li>Wall = grey</li>
+			<li>player 1 = green</li>
+			<li>player 2 = red</li>
+			<li>weaponBonus 1 = orange</li>
+			<li>weaponBonus 2 = bleu</li>
+			<li>weaponBonus 3 = brown</li>
+			<li>weaponBonus 4 = purple</li>
+		</ul>
+	</div>
+	<div id="board">
+		
+	</div>
+	
+	<!--Librairie jQuery & Polyfills-->
+    <script type="text/javascript" src="./scripts/librairies/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="./scripts/librairies/polyfill.js"></script>
+    <!--Import des Classes JS-->
+	<script src="./scripts/components/board.js"></script>
+	<script src="./scripts/components/cell.js"></script>
+	<script src="./scripts/components/player.js"></script>
+	<script src="./scripts/components/weapon.js"></script>
+	<!--Scripts de Contrôle et d'Affichage du Jeu-->
+	<script src="./scripts/controllers/engineController.js"></script>
+	<script src="./scripts/controllers/displayController.js"></script>
+	<script src="./scripts/controllers/gameController.js"></script>
+	<!-- <script src="_build/bundle.js"></script> -->
+</body>
+</html>
